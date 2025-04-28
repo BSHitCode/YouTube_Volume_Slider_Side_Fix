@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Volume Slider Side Fix",
+  "version": "1.0",
+  "description": "Moves the YouTube volume / mute button into the left controls on the player.",
+  "icons": {
+    "48": "icon-48.png",
+    "96": "icon-96.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "https://www.youtube.com/*"
+  ]
+}
